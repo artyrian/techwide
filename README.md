@@ -28,3 +28,10 @@ Run via docker-compose separatly:
 ```bash
 docker-compose up sqlite
 ```
+
+
+## Nosql
+
+### Redis
+
+Add simple docker conatainer with Redis for caching
