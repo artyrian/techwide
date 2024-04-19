@@ -35,3 +35,14 @@ docker-compose up sqlite
 ### Redis
 
 Add simple docker conatainer with Redis for caching
+
+
+## PubSub
+
+Simple pub-sub module via Redis channel
+
+To run:
+
+```
+docker-compose -f pubsub/docker-compose.yaml up
+```
