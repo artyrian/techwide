@@ -1,0 +1,13 @@
+services:
+
+  webapp:
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - '20080:80'
+
+  sqlite:
+    image: alpine
+    command: sh -c "apk add --no-cache sqlite && sqlite3 /data/sqlite.db && tail -f /dev/null"
+    volumes:
+      - ../data:/data

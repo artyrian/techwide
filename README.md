@@ -1,4 +1,5 @@
 # techwide
+
 TechWide is an experimental project for exploring and integrating various technologies.
 
 <!-- https://github.com/marwin1991/profile-technology-icons -->
@@ -10,9 +11,9 @@ TechWide is an experimental project for exploring and integrating various techno
 |
 
 ## General
-Some modules run via [docker-compose](./docker-compose.yaml) or local docker compose file in modules.
+Modules run via local docker compose file in modules.
 
-Just run:
+Just run in module:
 ```bash
 docker-compose up
 ```
@@ -32,10 +33,9 @@ A `Python` app with `FastAPI` (https://fastapi.tiangolo.com/) runs on the `Uvico
 ### SQL server
 We currently use a simple SQL server for relational models – `SQLite`.
 
-Run via docker-compose separatly:
+Run in `apiserver/` via docker-compose separately:
 ```bash
 docker-compose up sqlite
-
 ```
 
 ## Monitoring
