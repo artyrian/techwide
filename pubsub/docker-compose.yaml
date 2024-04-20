@@ -3,11 +3,20 @@ services:
   redis:
     image: redis:7.2-alpine
     restart: always
-    expose:
-      - 6379
+    ports:
+      - 6379:6379
     command: redis-server --save 20 1 --loglevel warning --requirepass ${REDIS_PASSWORD}
     volumes: 
       - redis:/data
+
+  redis-exporter:
+    image: oliver006/redis_exporter
+    ports:
+      - 9121:9121
+    environment:
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
+    links:
+      - redis
 
   pub:
     build:
